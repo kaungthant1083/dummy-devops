@@ -5,3 +5,9 @@ services:
     image: jenkins/jenkins:lts 
     ports: 
       - "8080:8080"
+    networks:
+      - jenkins
+#makesure to create jenkins network in your docker env
+networks:
+  jenkins: 
+    name: jenkins
